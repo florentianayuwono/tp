@@ -33,6 +33,7 @@ public class TodoListPanel extends UiPart<Region> {
     public TodoListPanel(SimpleStringProperty todoListHeader, ObservableList<Todo> todoList) {
         super(FXML);
         header.textProperty().bind(todoListHeader);
+        header.maxWidthProperty().bind(todoListView.widthProperty());
         todoListView.setItems(todoList);
         todoListView.setCellFactory(listView -> new TodoListViewCell());
     }
