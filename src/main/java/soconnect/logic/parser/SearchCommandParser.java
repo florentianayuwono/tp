@@ -54,10 +54,15 @@ public class SearchCommandParser implements Parser<SearchCommand> {
      */
     private boolean isValidSearchKeyword(ArgumentMultimap argMultimap) {
         List<String> keywords = argMultimap.getAllValues();
+        boolean valid = false;
         for (String keyword : keywords) {
-            if (keyword.trim().isEmpty()) {
-                return false;
+            if (!keyword.trim().isEmpty()) {
+                valid = true;
+                break;
             }
+        }
+        if (!valid) {
+            return false;
         }
         return keywords.stream().anyMatch(
                 keyword -> !keyword.replaceAll("[^a-zA-Z0-9]", "").trim().isEmpty());
