@@ -3,6 +3,8 @@ layout: page
 title: User Guide
 ---
 
+Insert nonsense here!
+
 ## 1. Welcome to SoConnect's User Guide!
 
 Here, you can find everything you need to know about **SoConnect**, the ultimate solution for your everyday contacts and tasks management headaches!
